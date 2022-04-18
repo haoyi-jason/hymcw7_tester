@@ -1,4 +1,4 @@
-QT       += core gui serialbus serialport
+QT       += core gui serialbus serialport charts
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,14 +10,18 @@ CONFIG += c++11
 
 SOURCES += \
     canbus_interface.cpp \
+    chartview.cpp \
     iio_model.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    pid_datamodel.cpp
 
 HEADERS += \
     canbus_interface.h \
+    chartview.h \
     iio_model.h \
-    mainwindow.h
+    mainwindow.h \
+    pid_datamodel.h
 
 FORMS += \
     mainwindow.ui

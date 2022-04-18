@@ -32,6 +32,10 @@ QVariant IIO_Model::data(const QModelIndex &index, int role) const
         default:return QVariant();break;
         }
         break;
+    case Qt::TextAlignmentRole:
+        return Qt::AlignRight;
+        break;
+    default:break;
     }
 
     return QVariant();
@@ -43,7 +47,7 @@ QVariant IIO_Model::headerData(int section, Qt::Orientation orientation, int rol
         switch(section){
         case 0:return QVariant("Channel");break;
         case 1:return QVariant("Raw Data");break;
-        case 2:return QVariant("Eng data");break;
+        case 2:return QVariant("Voltage(V)");break;
         default: return QVariant();break;
         }
     }
